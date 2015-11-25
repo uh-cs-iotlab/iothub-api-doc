@@ -1,0 +1,43 @@
+{
+  "name": "iothub-api-doc",
+  "version": "0.0.0",
+  "description": "IoT Hub API documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uh-cs-iotlab/iothub-api-doc.git"
+  },
+  "keywords": [
+    "IoT",
+    "IoT",
+    "Hub",
+    "API",
+    "doc",
+    "documentation"
+  ],
+  "author": "Julien Mineraud <julien.mineraud@cs.helsinki.fi>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/uh-cs-iotlab/iothub-api-doc/issues"
+  },
+  "homepage": "https://github.com/uh-cs-iotlab/iothub-api-doc#readme",
+  "dependencies": {
+    "babel-preset-react": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.7",
+    "jquery": "^2.1.4",
+    "marked": "^0.3.5",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.1"
+  }
+}
