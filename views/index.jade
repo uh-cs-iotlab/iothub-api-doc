@@ -1,4 +1,44 @@
 extends layout
 
+mixin request(method, address, input, output)
+  .row
+    div(class='one columns request_method')= method
+    div(class='ten columns request_address')= address
+  .row
+    div(class='six columns request_input')
+      code(class='hljs')
+        :highlight= input
+    div(class='six columns request_output')
+
+
 block content
-  include:markdown-it ../markdown/index.md
+  section(class='style1'): .container
+    h2 Description
+    p IoT Hubs are IoT platforms to ease the manipulation of IoT devices and the data that they produce.
+    p They can be multiple implementations of the IoT Hub in various languages, e.g.,
+      ul
+        li
+          a(href='https://github/uh-cs-iotlab/kahvihub') Kahvihub
+          , a multi-build Java and Android project implementation of the IoT Hub
+        li
+          a(href='https://github/uh-cs-iotlab/node-iothub') node-iothub
+          , a Node.js implementation of the IoT Hub
+
+    h2 Type of IoT Hubs
+    p There are two types of IoT Hubs, i.e., the #[strong IoT Hubs] which are own by a user 
+      and the #[strong meta-hubs], also known as #[strong IoT Market]
+
+    h3 User owned IoT Hub
+    p An IoT Hub is an extension of an IoT platform with high modularity.
+      IoT Hub modules are scripted (using Javascript) and are of different forms:
+      ul
+        li #[strong Plugins] are used to connect IoT devices or external data sources to the hub. 
+           There are only available to the hub owner. 
+           Their role is to transform the IoT data and devices into the generic models provided by the IoT Hub API.
+           
+    +request('GET', '/feeds', '{\"name\": \"Test JSON Object\", \"keywords\": [\"te\", \"json\"]}', 'examples/test.json')
+
+    h3 IoT Market
+    p The IoT Market, a.k.a, meta-hub
+
+    

@@ -10,9 +10,22 @@ html
     meta(name='keywords', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(href='//fonts.googleapis.com/css?family=Raleway:400,300,600', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='//cdn.jsdelivr.net/highlight.js/8.9.1/styles/zenburn.min.css')
     link(href='css/normalize.css', rel='stylesheet', type='text/css')
     link(href='css/skeleton.css', rel='stylesheet', type='text/css')
     link(href='css/iothubapidoc.css', rel='stylesheet', type='text/css')
   body
-    .container
-      block content
+    header
+      .container
+        h1
+          img(src='images/iothub_icon.png', alt='IoT Hub')
+          span= title
+        if subtitle 
+          h3= subtitle
+
+    block content
+
+    footer
+      .container
+        ul
+          li: a(href='/') Home

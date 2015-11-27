@@ -4,7 +4,8 @@ var express = require('express'),
 
 var indexCb = function(req, res, next) {
     res.render('index', {
-	title: 'My title'
+	title: 'IoT Hub API documentation',
+	subtitle: 'A middleware extension for interoperable IoT systems'
     });
 }
 
